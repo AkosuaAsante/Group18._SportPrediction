@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewpoint" content="width=device-width,initial-scale=1-0">
+
+    <title>Player Rating Prediction</title>
+</head>
+
+<body style="background-color: antiquewhite;"> 
+    <div class="login">
+        <h1 style="color: blueviolet;">Rate The Player</h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="movement_reaction" placeholder="movement_reaction" required="required"/><br>
+            <input type="text" name="mentality_composure" placeholder="mentality_composure" required="required"/><br>
+            <input type="text" name="passing" placeholder="passing" required="required"/><br>
+            <input type="text" name="rcm" placeholder="rignt center midfeild" required="required"/><br>
+            <input type="text" name="cm" placeholder="center midfeild" required="required"/><br>
+            <input type="text" name="lcm" placeholder="left center midfeild" required="required"/><br>
+            <input type="text" name="potential" placeholder="potential" required="required"/><br>
+            <input type="text" name="rm" placeholder="right midfeild" required="required"/><br>
+            <input type="text" name="lm" placeholder="left midfeild" required="required"/><br>
+            <input type="text" name="lam" placeholder="left wing" required="required"/><br>
+            <input type="text" name="cam" placeholder="center wing" required="required"/><br>
+            <input type="text" name="ram" placeholder="right wing" required="required"/><br>
+            <input type="text" name="realase clause" placeholder="realase clause" required="required"/><br>
+            <input type="text" name="cf" placeholder="center forward" required="required"/><br>
+            <input type="text" name="lf" placeholder="right foward" required="required"/><br>
+            <input type="text" name="rf" placeholder="right forward" required="required"/><p>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict Player Rating</button></p>
+            
+        </form>
+    <br>
+    <br>
+    <h4 style="color: blueviolet;">
+    {{prediction_text}}</h4>
+
+    </div>
+
+    
+</body>
+
